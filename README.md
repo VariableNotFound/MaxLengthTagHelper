@@ -3,12 +3,12 @@ An ASP.NET Core MVC Tag Helper for automatically adding 'maxlength' attribute to
 
 ## Usage
 
-1. Include the file [MaxLengthTagHelper](src/MaxLengthTagHelperDemo/TagHelpers/MaxLengthTagHelper.cs) in your project.
+1. Include the class [MaxLengthTagHelper](src/MaxLengthTagHelperDemo/TagHelpers/MaxLengthTagHelper.cs) in your project.
 2. Add the following directive to the view where you are going to use the tag helper, or in `Views/ViewImports.cshtml` if you wish to make it available to all the views in the project:
 
-       ```cshtml
-       @addTagHelper *, YourProjectAssemblyName
-       ```
+      ```cshtml
+      @addTagHelper *, YourProjectAssemblyName
+      ```
 
 ## Example
 
