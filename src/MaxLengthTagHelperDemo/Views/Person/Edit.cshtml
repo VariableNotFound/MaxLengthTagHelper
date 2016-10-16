@@ -1,0 +1,33 @@
+﻿@model MaxLengthTagHelperDemo.ViewModels.PersonViewModel
+@addTagHelper *, MaxLengthTagHelperDemo
+@{
+    ViewData["Title"] = "Edit person";
+}
+<h1>@ViewData["Title"]</h1>
+
+<form asp-action="Edit" method="post">
+    <div class="form-group">
+        <label asp-for="FirstName"></label>
+        <span asp-validation-for="FirstName"></span>
+        <input asp-for="FirstName" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="LastName"></label>
+        <span asp-validation-for="LastName"></span>
+        <input asp-for="LastName" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Email"></label>
+        <span asp-validation-for="Email"></span>
+        <input asp-for="Email" class="form-control" maxlength="180" /> <!-- Override maxlength -->
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Save changes</button>
+    </div>
+</form>
+
+@section Scripts {
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}
+
